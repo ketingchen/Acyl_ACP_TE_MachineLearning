@@ -91,10 +91,10 @@ cross=function(data, verbose=1){
 		train <- data[-idx, ]
 		test <- data[idx, ]
 	    
-	    xm <- colnames(data)
-	    xm <- xm[xm!="label"]
+	    	xm <- colnames(data)
+	    	xm <- xm[xm!="label"]
    	 	xnew <- test[, xm]
-    	ynew <- test[, "label"]
+    		ynew <- test[, "label"]
     
 		mod <- ranger(label ~., data=train, classification=T)
 		yhat <- predict(mod, data=xnew)$predictions
@@ -108,7 +108,7 @@ cross=function(data, verbose=1){
 		tp <- sum(p1 %in% p0)
 		fp <- sum(!p1 %in% p0)
 		tn <- sum(n1 %in% n0)
-	    fn <- sum(!n1 %in% n0)
+	   	 fn <- sum(!n1 %in% n0)
 		
 		TPR[te] <- tp / length(p0)
 		TNR[te] <- tn / length(n0)
