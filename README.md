@@ -9,4 +9,5 @@ Step 2.1: define the instance for RF classifier, response --> comparison of fatt
 Step 2.2: construction of RF classifier. The classifier was implemented 10 times using the same dataset to account for the randomness involved in classifier construction.<br>
 Step 2.3: calculate the feature importance score and the associted p-values according to the 10 RF classifiers<br>
 Step 2.4: calculate the rank of feature importance from high to low <br>
-## Step 3: Further trimming of the results in step 2 to obtain the short list of important features. Incremental feature selection approach was used to identify the RF classifier with the minimum number of features but having an optimal predictive performace --> use script 
+## Step 3: Further trimming of the results in step 2 to obtain the short list of important features --> use script  
+Incremental feature selection approach was used to identify the RF classifier with the minimum number of features but having an optimal predictive performace 
