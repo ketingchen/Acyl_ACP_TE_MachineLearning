@@ -15,6 +15,6 @@ Step 2.2: construction of RF classifier. The classifier was implemented 10 times
 Step 2.3: calculate the feature importance score and the associted p-values according to the 10 RF classifiers<br>
 Step 2.4: calculate the rank of feature importance from high to low <br>
 
-### Step 3: Further trimming of the results in step 2 to obtain the short list of important features --> use script  
+### Step 3: Further trimming of the results in step 2 to obtain the short list of important features --> use script RF_IFS.R
 Incremental feature selection approach was used to identify the RF classifier with the minimum number of features but having an optimal predictive performance. <br>
 Input: pairwise comparison of TE sequences encoded with labels.csv; TE substrate specificities.csv; importance_rank.txt <br>
