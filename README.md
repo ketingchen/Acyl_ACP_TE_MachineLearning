@@ -1,6 +1,6 @@
 # Acyl_ACP_TE_MachineLearning
-The R codes used to select important residues impacting TE substrate specificities are provided in "TE_randomForest.R". R codes are implemented in R version 3.6.
-The input files include "TE fatty acid profiles.csv" and "pairwise comparison of TE sequences encoded with labels.csv".
+R scripts in this repo are implemented in R version 3.6.
+The input files include "TE fatty acid profiles.csv", "TE substrate specificities.csv", and "pairwise comparison of TE sequences encoded with labels.csv".
 
 ###### The following R scripts are used following the order described below for different purposes
 ## Step 1: Clustering analysis for fatty acid profiles of each TE --> use script fatty_acid_profile_clustering.R
