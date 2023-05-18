@@ -2,7 +2,7 @@
 R scripts in this repo are implemented in R version 3.6.
 The input files include "TE fatty acid profiles.csv", "TE substrate specificities.csv", and "pairwise comparison of TE sequences encoded with labels.csv".
 
-### The following R scripts are used following the order described below for different purposes
+### The R scripts are used in the order described below for different purposes.
 ### Step 1: Clustering analysis for fatty acid profiles of each TE --> use script fatty_acid_profile_clustering.R
 Input: TE fatty acid profiles.csv <br>
 Output: FA_clustering.rds <br>
