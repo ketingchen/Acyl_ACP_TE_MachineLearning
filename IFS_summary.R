@@ -17,19 +17,14 @@ mcc.sd <- apply(mcc, 2, sd)
 
 eval <- eval0
 
-#########  z-transformation of correlation coefficients #########
+#########  z-transformation of mcc #########
 z.trans = function(r){
 	0.5*(log(1+r) - log(1-r))
 }
-logit.trans = function(p){
-	log(p/(1-p))
-}
 
-tpr.logit = logit.trans(tpr)
-tnr.logit = logit.trans(tnr)
 mcc.z = z.trans(mcc)
 
-
+#########  comparision of mcc between every pair of adjacent models #########
 pval <- NULL
 for(i in 1:(ncol(mcc.z)-1)){
 	a <- mcc.z[,i]
