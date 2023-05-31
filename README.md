@@ -19,4 +19,10 @@ Step 2.4: calculate the rank of feature importance from high to low <br>
 ### Step 3: Further trimming of the results in step 2 to obtain the short list of important features --> use script RF_IFS.R
 Incremental feature selection approach was used to identify the RF classifier with the minimum number of features but having an optimal predictive performance. <br>
 Input: pairwise comparison of TE sequences encoded with labels.csv; TE substrate specificities.csv; importance_rank.txt <br>
-Output: IFS_evaluation.rds
+Output: IFS_evaluation.rds<br>
+
+### Step 4: Summarize and plot the IFS results --> use script IFS_summary.R
+Comparison of MCC was made between every pair of neighbouring models in IFS to determine the minimum number of features needed to reach MCC plateau.<br>
+IFS_summary.R requires asterisk.R and errbar.R.<br>
+Input: IFS_evaluation.rds<br>
+Output: IFS_model_comparison_mcc.csv<br>
