@@ -11,16 +11,16 @@ fatty_acid_profile_clustering.R depends on two additional scritps: PlotDimRdc.R 
 *Input*: pairwise comparison of TE sequences encoded with labels.csv; FA_clustering.rds <br>
 *Output*: pvalues_10Runs_RF.txt; importance_score_10Runs_RF.txt; importance_rank.txt <br>
 <br>
-1. Define the instance for RF classifier, response --> comparison of fatty acid profile cluster membership between two TEs (1, same cluster; 0, different clusters); feature --> sequence variation of two TEs at each amino acid position (0, same amino acids; 1, different amino acids)
-2. Construction of RF classifier. The classifier was implemented 10 times using the same dataset to account for the randomness involved in classifier construction.<br>
-3. Calculate the feature importance score and the associted p-values according to the 10 RF classifiers<br>
-4. Calculate the rank of feature importance from high to low <br>
-<br>
+1. Define the instance for RF classifier, response --> comparison of fatty acid profile cluster membership between two TEs (1, same cluster; 0, different clusters); feature --> sequence variation of two TEs at each amino acid position (0, same amino acids; 1, different amino acids).
+2. Construction of RF classifier. The classifier was implemented 10 times using the same dataset to account for the randomness involved in classifier construction.
+3. Calculate the feature importance score and the associted p-values according to the 10 RF classifiers.
+4. Calculate the rank of feature importance from high to low.
+
 ### Step 3: Further trimming of the results in step 2 to obtain the short list of important features --> use script RF_IFS.R
 Incremental feature selection approach was used to identify the RF classifier with the minimum number of features but having an optimal predictive performance. <br>
 *Input*: pairwise comparison of TE sequences encoded with labels.csv; TE substrate specificities.csv; importance_rank.txt <br>
 *Output*: IFS_evaluation.rds<br>
-<br>
+
 ### Step 4: Summarize and plot the IFS results --> use script IFS_summary.R
 Comparison of MCC was made between every pair of neighbouring models in IFS to determine the minimum number of features needed to reach MCC plateau.<br>
 IFS_summary.R requires asterisk.R and errbar.R.<br>
