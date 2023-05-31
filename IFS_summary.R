@@ -36,7 +36,7 @@ for(i in 1:(ncol(mcc.z)-1)){
 	conf <- paste0("(",round(test$conf.int[1], 3), ",", round(test$conf.int[2],3),")")
 	p <- test$p.value
 	comparison <- paste0(i+1, "vs", i+2)
-	##### use the non-transformed data for the table
+	##### use the non-transformed data for generate a output table
 	mean.a <- mean(mcc[,i])
 	mean.b <- mean(mcc[,i+1])
 	delta <- mean.a - mean.b
