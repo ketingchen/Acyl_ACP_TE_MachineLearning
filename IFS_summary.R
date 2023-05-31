@@ -59,10 +59,11 @@ imp <- read.table("importance_score_10Runs_RF.txt")
 imp <- apply(imp, 1, mean)
 pval <- read.table("pvalues_10Runs_RF.txt")
 pval <- pval$fin.p
+rank <- read.table("importance_rank.txt")
 
 col <- rep("black", length(imp)) #### non-signficant positions
 col[pval<0.01] <- "dodgerblue" #### signficiant positions
-col[imp>=sort(imp, decreasing=T)[26]] <- "tomato" #### most important positions as selected by IFS apporach
+col[as.numeric(gsub("X", "", rownames(rank)[1:22]))] <- "tomato" #### most important positions as selected by IFS apporach
 
 plot(x=1:351, y=imp, ylim=c(-2, 21), xlim=c(0, 350), axes=F, type="h", col=col, xlab="Residue position", ylab="Importance score"); box()
 points(x=which(col=="tomato"), y=imp[which(col=="tomato")], pch=16, cex=0.7, col="tomato")
@@ -97,9 +98,9 @@ points(2:30, eval[2,2:30], type="l", col="coral", lwd=1)
 errbar(2:30, eval[2,2:30], col="indianred2", bar=tnr.sd[2:30])
 points(2:30, eval[3,2:30], type="l", col="forestgreen", lwd=1)
 errbar(2:30, eval[3,2:30], col="green4", bar=mcc.sd[2:30])
-points(27, eval[1, 27], pch=19, col="magenta", cex=1)
-points(27, eval[2, 27], pch=19, col="coral", cex=1)
-points(27, eval[3, 27], pch=19, col="forestgreen", cex=1)
+points(22, eval[1, 21], pch=19, col="magenta", cex=1)
+points(22, eval[2, 21], pch=19, col="coral", cex=1)
+points(22, eval[3, 21], pch=19, col="forestgreen", cex=1)
 
 legend("topleft", legend=expression(bold("c")), xjust=0, bty="n")
 
