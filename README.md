@@ -10,7 +10,7 @@ fatty_acid_profile_clustering.R depends on two additional scritps: PlotDimRdc.R 
 ### Step 2: Evaluation of feature importance by random forest (RF) classifier --> use script RF_feature importance.R
 *Input*: pairwise comparison of TE sequences encoded with labels.csv; FA_clustering.rds <br>
 *Output*: pvalues_10Runs_RF.txt; importance_score_10Runs_RF.txt; importance_rank.txt <br>
-1. Define the instance for RF classifier:<br> Response --> comparison of fatty acid profile cluster membership between two TEs (1, same cluster; 0, different clusters); <br> Feature --> sequence variation of two TEs at each amino acid position (0, same amino acids; 1, different amino acids).
+1. Define the instance for RF classifier:<br> Response --> comparison of fatty acid profile cluster membership between two TEs (1, same cluster; 0, different clusters).<br> Feature --> sequence variation of two TEs at each amino acid position (0, same amino acids; 1, different amino acids).
 3. Construction of RF classifier. The classifier was implemented 10 times using the same dataset to account for the randomness involved in classifier construction.
 4. Calculate the feature importance score and the associted p-values according to the 10 RF classifiers.
 5. Calculate the rank of feature importance from high to low.
