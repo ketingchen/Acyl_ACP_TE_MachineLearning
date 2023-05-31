@@ -4,8 +4,8 @@ The input files include "TE fatty acid profiles.csv", "TE substrate specificitie
 
 ### The R scripts are used in the order described below for different purposes.
 ### Step 1: Clustering analysis for fatty acid profiles of each TE --> use script fatty_acid_profile_clustering.R
-Input: TE fatty acid profiles.csv <br>
-Output: FA_clustering.rds <br>
+**Input**: TE fatty acid profiles.csv <br>
+**Output**: FA_clustering.rds <br>
 fatty_acid_profile_clustering.R depends on two additional scritps: PlotDimRdc.R and PLS.R.
 ### Step 2: Evaluation of feature importance by random forest (RF) classifier --> use script RF_feature importance.R
 Input: pairwise comparison of TE sequences encoded with labels.csv; FA_clustering.rds <br>
