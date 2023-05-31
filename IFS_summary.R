@@ -51,7 +51,7 @@ write.csv(pval.mcc, "Revision/IFS_model_comparison_mcc.csv", row.names=F)
 ################## Plotting based on importance score and p-values ##################
 source("/Users/kchen/Box/SILKY/Keting/Projects/Essential scripts/errbar.R")
 
-pdf("Revision/Fig6.pdf", width=3.46, height=5.11, pointsize=7)
+pdf("Revision/Fig5.pdf", width=3.46, height=5.11, pointsize=7)
 par(mfrow=c(3,1), mar=c(4, 4, 1.5, 1), cex=1)
 ##########################################################################################
 #### a: residue position with different levels of importance for substrate specificity
