@@ -23,5 +23,5 @@ Incremental feature selection approach was used to identify the RF classifier wi
 ### Step 4: Summarize and plot the IFS results --> use script IFS_summary.R
 Comparison of MCC was made between every pair of neighbouring models in IFS to determine the minimum number of features needed to reach MCC plateau.<br>
 IFS_summary.R requires asterisk.R and errbar.R.<br>
-*Input*: IFS_evaluation.rds<br>
+*Input*: IFS_evaluation.rds; importance_score_10Runs_RF.txt; pvalues_10Runs_RF.txt<br>
 *Output*: IFS_model_comparison_mcc.csv<br>
